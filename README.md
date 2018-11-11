@@ -1,15 +1,31 @@
 # MyReads Project
 
-This is the starter template for the final assessment project for Udacity's React Fundamentals course. The goal of this template is to save you time by providing a static example of the CSS and HTML markup that may be used, but without any of the React code that is needed to complete the project. If you choose to start with this template, your job will be to add interactivity to the app by refactoring the static code in this template.
+This is the final version for Udacity Frontend Nanodegree Project 6.
 
-Of course, you are free to start this project from scratch if you wish! Just be sure to use [Create React App](https://github.com/facebookincubator/create-react-app) to bootstrap the project.
+## Instructions
+* To install all project dependencies, run `npm install`
+* To launch the App, run `npm start`
 
-## TL;DR
+## Implementation Details
+* 2 components (BookItem and BookShelf) are used to modulize the DOM and data
+* 3 state variables are stored within the App component
+  * books -- the array containing books shelved by the user
+  * query -- the string containing the search query
+  * queryBooks -- the array containing books returned from the search result; the books might or might not be present in the shelved book list
+* Principles learnt from the course are implemented throughout the Project
+  * BookShelf and BookItem does not contain any state variable
+  * BookItem component is reused in book shelf and search page
+  * Books can be moved to different shelf without issue
+  * state variable is only modified via `setState()` method
+  * Array `map` and `filter` methods are used wherever possible
+  * Router is implemented with expected behavior
+  * Book shelf status are maintained in sync; altering shelf list or search page will change the status of the other page
+  * Server is updated to ensure data is retained at page reload
+  * No warnings or errors observed during testing
+  * CSS is updated with customized color
 
-To get started developing right away:
 
-* install all project dependencies with `npm install`
-* start the development server with `npm start`
+# ------ Below are instructions from starter code ------
 
 ## What You're Getting
 ```bash
